@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Travel Booking Engine (Cross-Website MetaSearch) — Full Stack Demo
 
 This is a working prototype inspired by platforms like **Skyscanner / KAYAK / Google Flights**.
@@ -78,3 +79,7 @@ FRONTEND_ORIGIN=http://localhost:5173
 - All “cross-website provider results” are **mock aggregated offers** (so no API keys needed).
 - Tracking uses **browser Geolocation**; allow location permissions when prompted.
 
+=======
+# Travel-Tracker
+Travel Booking Engine with Cross-Website Capability is a software platform that allows users to search, compare, and book travel services (flights, hotels, buses, trains, car rentals) by pulling real-time data from multiple external travel websites and service providers within a single interface
+>>>>>>> 0bd9d686a913a99bd19474645b87742bed873982

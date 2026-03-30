@@ -1,0 +1,10 @@
+{
+  "name": "travel-meta-search-fullstack",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}
+

@@ -1,0 +1,162 @@
+{
+  "bookings": [
+    {
+      "bookingId": "bkg_1ww1HPXCfj",
+      "createdAt": "2026-03-30T15:01:08.970Z",
+      "status": "confirmed",
+      "passengerName": "Dhanu",
+      "mode": "in_platform",
+      "offer": {
+        "kind": "flight",
+        "offerId": "flt_RChaGe-yer",
+        "provider": "Indigo",
+        "from": "Chennai",
+        "to": "Delhi",
+        "departDate": "2026-04-06",
+        "airline": "IndiGo",
+        "flightNumber": "6E 783",
+        "departTime": "15:00",
+        "arriveTime": "18:26",
+        "durationMinutes": 206,
+        "stops": 0,
+        "price": {
+          "currency": "INR",
+          "total": 5271
+        },
+        "deepLink": "https://example.com/redirect/indigo/flight"
+      }
+    },
+    {
+      "bookingId": "bkg_X-XEXUsNNW",
+      "createdAt": "2026-03-30T15:01:21.932Z",
+      "status": "confirmed",
+      "passengerName": "Dhanu",
+      "email": "dhanushri9361@gmail.com",
+      "mode": "in_platform",
+      "offer": {
+        "kind": "flight",
+        "offerId": "flt_RChaGe-yer",
+        "provider": "Indigo",
+        "from": "Chennai",
+        "to": "Delhi",
+        "departDate": "2026-04-06",
+        "airline": "IndiGo",
+        "flightNumber": "6E 783",
+        "departTime": "15:00",
+        "arriveTime": "18:26",
+        "durationMinutes": 206,
+        "stops": 0,
+        "price": {
+          "currency": "INR",
+          "total": 5271
+        },
+        "deepLink": "https://example.com/redirect/indigo/flight"
+      }
+    },
+    {
+      "bookingId": "bkg_HRl3snRpTR",
+      "createdAt": "2026-03-30T15:01:23.186Z",
+      "status": "confirmed",
+      "passengerName": "Dhanu",
+      "email": "dhanushri9361@gmail.com",
+      "mode": "in_platform",
+      "offer": {
+        "kind": "flight",
+        "offerId": "flt_RChaGe-yer",
+        "provider": "Indigo",
+        "from": "Chennai",
+        "to": "Delhi",
+        "departDate": "2026-04-06",
+        "airline": "IndiGo",
+        "flightNumber": "6E 783",
+        "departTime": "15:00",
+        "arriveTime": "18:26",
+        "durationMinutes": 206,
+        "stops": 0,
+        "price": {
+          "currency": "INR",
+          "total": 5271
+        },
+        "deepLink": "https://example.com/redirect/indigo/flight"
+      }
+    },
+    {
+      "bookingId": "bkg_CotRqEj65R",
+      "createdAt": "2026-03-30T15:01:24.113Z",
+      "status": "confirmed",
+      "passengerName": "Dhanu",
+      "email": "dhanushri9361@gmail.com",
+      "mode": "in_platform",
+      "offer": {
+        "kind": "flight",
+        "offerId": "flt_RChaGe-yer",
+        "provider": "Indigo",
+        "from": "Chennai",
+        "to": "Delhi",
+        "departDate": "2026-04-06",
+        "airline": "IndiGo",
+        "flightNumber": "6E 783",
+        "departTime": "15:00",
+        "arriveTime": "18:26",
+        "durationMinutes": 206,
+        "stops": 0,
+        "price": {
+          "currency": "INR",
+          "total": 5271
+        },
+        "deepLink": "https://example.com/redirect/indigo/flight"
+      }
+    }
+  ],
+  "tracking": [],
+  "places": [
+    {
+      "id": "place_goa",
+      "name": "Baga Beach",
+      "city": "Goa",
+      "country": "India",
+      "lat": 15.5525,
+      "lng": 73.7517,
+      "tags": [
+        "beach",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "place_delhi",
+      "name": "India Gate",
+      "city": "New Delhi",
+      "country": "India",
+      "lat": 28.6129,
+      "lng": 77.2295,
+      "tags": [
+        "monument",
+        "family"
+      ]
+    },
+    {
+      "id": "place_agra",
+      "name": "Taj Mahal",
+      "city": "Agra",
+      "country": "India",
+      "lat": 27.1751,
+      "lng": 78.0421,
+      "tags": [
+        "wonder",
+        "monument"
+      ]
+    },
+    {
+      "id": "place_chennai",
+      "name": "Marina Beach",
+      "city": "Chennai",
+      "country": "India",
+      "lat": 13.05,
+      "lng": 80.2824,
+      "tags": [
+        "beach",
+        "sunset"
+      ]
+    }
+  ]
+}

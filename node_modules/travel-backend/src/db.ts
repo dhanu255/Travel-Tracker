@@ -6,7 +6,8 @@ import type { DbData, TravelPlace } from "./types.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const dbFile = path.join(__dirname, "..", "data", "db.json");
+const isVercel = !!process.env.VERCEL;
+const dbFile = isVercel ? "/tmp/db.json" : path.join(__dirname, "..", "data", "db.json");
 
 const seedPlaces: TravelPlace[] = [
   {

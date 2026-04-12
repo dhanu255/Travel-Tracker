@@ -106,6 +106,33 @@
         },
         "deepLink": "https://example.com/redirect/indigo/flight"
       }
+    },
+    {
+      "bookingId": "bkg_B_VNYcGCas",
+      "createdAt": "2026-03-30T15:47:39.077Z",
+      "status": "confirmed",
+      "passengerName": "Dhanu",
+      "email": "dhanushri9361@gmail.com",
+      "mode": "in_platform",
+      "offer": {
+        "kind": "flight",
+        "offerId": "flt_ehiStzrSsi",
+        "provider": "Indigo",
+        "from": "Chennai",
+        "to": "Delhi",
+        "departDate": "2026-04-06",
+        "airline": "IndiGo",
+        "flightNumber": "6E 783",
+        "departTime": "15:00",
+        "arriveTime": "18:26",
+        "durationMinutes": 206,
+        "stops": 0,
+        "price": {
+          "currency": "INR",
+          "total": 5271
+        },
+        "deepLink": "https://example.com/redirect/indigo/flight"
+      }
     }
   ],
   "tracking": [],

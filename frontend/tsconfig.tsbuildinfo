@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/env.ts","./src/main.tsx","./src/setupleafleticons.ts","./src/types.ts","./src/vite-env.d.ts","./src/components/shell.tsx","./src/lib/api.ts","./src/lib/format.ts","./src/pages/bookingpage.tsx","./src/pages/historypage.tsx","./src/pages/homepage.tsx","./src/pages/placespage.tsx","./src/pages/trackingpage.tsx"],"version":"5.9.3"}

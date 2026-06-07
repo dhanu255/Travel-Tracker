@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JSONFilePreset } from "lowdb/node";
@@ -8,6 +9,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const isVercel = !!process.env.VERCEL;
 const dbFile = isVercel ? "/tmp/db.json" : path.join(__dirname, "..", "data", "db.json");
+
+if (!isVercel) {
+  fs.mkdirSync(path.dirname(dbFile), { recursive: true });
+}
 
 const seedPlaces: TravelPlace[] = [
   {

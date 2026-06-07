@@ -18,6 +18,13 @@ app.use(
 );
 app.use(express.json({ limit: "1mb" }));
 
+app.use((err: unknown, _req: express.Request, res: express.Response, next: express.NextFunction) => {
+  if (err instanceof SyntaxError && "body" in err) {
+    return res.status(400).json({ error: "Invalid JSON body" });
+  }
+  next(err);
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true, name: "travel-backend", time: Date.now() });
 });
@@ -127,9 +134,18 @@ app.get("/api/tracking/history", async (req, res) => {
 });
 
 if (!process.env.VERCEL) {
-  app.listen(PORT, () => {
+  const server = app.listen(PORT, "0.0.0.0", () => {
     // eslint-disable-next-line no-console
     console.log(`Backend listening on http://localhost:${PORT}`);
+  });
+
+  server.on("error", (err: NodeJS.ErrnoException) => {
+    if (err.code === "EADDRINUSE") {
+      // eslint-disable-next-line no-console
+      console.error(`Port ${PORT} is already in use. Stop the other process or set PORT to a different value.`);
+      process.exit(1);
+    }
+    throw err;
   });
 }
 

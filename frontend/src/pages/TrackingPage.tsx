@@ -1,7 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, Marker, Polyline, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from "react-leaflet";
 import { trackingHistory, trackingPing } from "../lib/api";
 import type { TrackingPing as Ping } from "../types";
+
+function RecenterMap({ center, zoom }: { center: [number, number]; zoom: number }) {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(center, zoom);
+  }, [center, zoom, map]);
+  return null;
+}
 
 type Geo = { lat: number; lng: number };
 
@@ -133,6 +141,7 @@ export default function TrackingPage() {
           <div className="mapWrap">
             <MapContainer center={[center.lat, center.lng]} zoom={latest ? 13 : 5} style={{ height: "100%", width: "100%" }}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <RecenterMap center={[center.lat, center.lng]} zoom={latest ? 13 : 5} />
               {path ? <Polyline positions={path} /> : null}
               {latest ? (
                 <Marker position={[latest.lat, latest.lng]}>

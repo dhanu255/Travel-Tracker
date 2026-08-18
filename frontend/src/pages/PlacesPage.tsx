@@ -1,7 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { getPlaces } from "../lib/api";
 import type { TravelPlace } from "../types";
+
+function RecenterMap({ center, zoom }: { center: [number, number]; zoom: number }) {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(center, zoom);
+  }, [center, zoom, map]);
+  return null;
+}
 
 type Geo = { lat: number; lng: number };
 
@@ -112,6 +120,7 @@ export default function PlacesPage() {
           <div className="mapWrap">
             <MapContainer center={[center.lat, center.lng]} zoom={userPos ? 6 : 5} style={{ height: "100%", width: "100%" }}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <RecenterMap center={[center.lat, center.lng]} zoom={userPos ? 6 : 5} />
               {computed.map((p) => (
                 <Marker key={p.id} position={[p.lat, p.lng]}>
                   <Popup>

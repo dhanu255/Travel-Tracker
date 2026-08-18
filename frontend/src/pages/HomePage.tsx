@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { health } from "../lib/api";
 
 export default function HomePage() {
@@ -54,17 +55,17 @@ export default function HomePage() {
           <div className="cardTitle">Booking</div>
           <div className="muted">Search and compare flight/hotel offers and create a booking.</div>
           <div className="spacer" />
-          <a className="btn" href="/booking">
+          <Link className="btn" to="/booking">
             Start searching
-          </a>
+          </Link>
         </div>
         <div className="card">
           <div className="cardTitle">Tracking</div>
           <div className="muted">Capture live browser GPS pings and visualize them on a map.</div>
           <div className="spacer" />
-          <a className="btn" href="/tracking">
+          <Link className="btn" to="/tracking">
             Open tracking
-          </a>
+          </Link>
         </div>
       </section>
     </div>
